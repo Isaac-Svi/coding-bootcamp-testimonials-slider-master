@@ -1,0 +1,140 @@
+* {
+	font-family: "Inter", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: calc(8px + 0.5vw + 0.5vh);
+	--base-width: 60rem; /*original dimensions are 1440 x 800*/
+	--base-height: calc(var(--base-width) / 1.8);
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	position: relative;
+	width: var(--base-width);
+	height: var(--base-height);
+	overflow: hidden;
+	/* box-shadow: 0 2px 5px rgba(0,0,0,0.5); */
+	background-color: white;
+}
+
+.testimonials {
+	max-width: 2880px;
+	position: absolute;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	transition: left 1s;
+}
+
+.testimonial {
+	float: left;
+	position: relative;
+	max-width: 1440px;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.testimonial .curve-img {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.testimonial-text {
+	position: relative;
+	min-width: 400px;
+	width: 45%;
+	height: 45%;
+	left: 6%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+
+.testimonial-text .quote {
+	line-height: 1.5;
+	font-size: calc(var(--base-width) / 45);
+	font-weight: 300;
+}
+
+.testimonial-text .quotes-img {
+	position: absolute;
+	top: -2%;
+	left: 15%;
+}
+
+.testimonial-text .author {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-weight: 700;
+	font-size: calc(var(--base-width) / 65);
+	width: 100%;
+}
+
+.testimonial-text .author span {
+	margin-left: 1%;
+	font-weight: 500;
+	color: hsl(240, 18%, 77%);
+}
+
+.testimonial-assets {
+	position: relative;
+	width: 50%;
+	height: 90%;
+	right: 4%;
+}
+
+.testimonial-assets .p-bg {
+	position: absolute;
+	width: calc(var(--base-width) / 1.93);
+	height: calc(var(--base-width) / 2.05);
+}
+
+.testimonial-assets .p-img {
+	position: absolute;
+	z-index: 2;
+	top: 49.5%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 5px;
+	width: calc(var(--base-width) / 2.5);
+	height: calc(var(--base-width) / 2.5);
+	box-shadow: 0 20px 20px rgba(32,32,70,0.2);
+}
+
+.testimonial-assets .arrows {
+	position: absolute;
+	z-index: 3;
+	left: 18%;
+	bottom: 6%;
+	width: 5rem;
+	height: 2.5rem;
+	background-color: white;
+	border-radius: 7rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 0 10px 20px rgba(32,32,70,0.2);
+}
+
+.testimonial-assets .arrows img {
+	cursor: pointer;
+}
+
